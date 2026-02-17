@@ -1,0 +1,10 @@
+.sidebar {
+      width:200px;
+      padding:20px;
+      background:#f4f4f4;
+      height:100vh;
+    }
+    a {
+      display:block;
+      margin-bottom:10px;
+    }
