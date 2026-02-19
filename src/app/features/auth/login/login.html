@@ -1,10 +1,19 @@
+
+
 <mat-card appearance="outlined">
   <mat-card-header>
     <mat-card-title> Anand Bank</mat-card-title>
-    <mat-card-subtitle>Sign in to your account</mat-card-subtitle>
+    <mat-card-subtitle>
+      @if(loginType === 0){
+      Sign in to your account
+      }
+      @if(loginType === 1){
+      Admin Portal Login
+      }</mat-card-subtitle>
   </mat-card-header>
   <mat-card-actions>
     <form class="example-form">
+      @if (loginType === 0) {
         <mat-form-field class="example-full-width">
             <mat-label>Email</mat-label>
             <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
@@ -33,12 +42,36 @@
        <div class="matHints">
         <mat-hint>We'll never share your email.</mat-hint>
        </div>
-        <div class="AdminLoginBtn">
-        <button matButton="tonal" >Admin Login</button>
+       <div class="AdminLoginBtn">
+        <button matButton="tonal" type="button" (click)="switchToAdmin()">
+          Switch to Admin
+        </button>
        </div>
-         
-</form>
+    } 
+      @if (loginType === 1) {
 
+        <mat-form-field class="example-full-width">
+          <mat-label>Admin Username</mat-label>
+          <input type="text" matInput placeholder="Enter username">
+        </mat-form-field>
+           <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Enter password">
+        </mat-form-field>
+
+        <div class="loginBtn">
+          <button matButton="tonal">Admin Login</button>
+        </div>
+
+        <div class="AdminLoginBtn">
+          <button matButton="tonal" type="button" (click)="switchToUser()">
+            Back to User Login
+          </button>
+        </div>
+      }
+
+
+</form>
   </mat-card-actions>
 </mat-card>
 

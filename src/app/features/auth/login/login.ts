@@ -15,5 +15,14 @@ import {MatInputModule} from '@angular/material/input';
 })
 export class Login {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  loginType: number = 0;  // 0 = User , 1 = Admin
+
+switchToAdmin() {
+  this.loginType = 1;
+}
+
+switchToUser() {
+  this.loginType = 0;
+}
 
 }
