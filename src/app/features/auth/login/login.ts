@@ -4,6 +4,7 @@ import {MatCardModule} from '@angular/material/card';
 import {FormControl, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 export class Login {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   loginType: number = 0;  // 0 = User , 1 = Admin
+  constructor(private router: Router) {}
 
 switchToAdmin() {
   this.loginType = 1;
@@ -23,6 +25,10 @@ switchToAdmin() {
 
 switchToUser() {
   this.loginType = 0;
+}
+
+login(){
+  this.router.navigate(['/user/dashboard']);
 }
 
 }

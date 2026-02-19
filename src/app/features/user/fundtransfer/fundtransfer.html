@@ -1,0 +1,66 @@
+<div class="container-fluid p-4">
+
+  <!-- Page Header -->
+  <div class="mb-4">
+    <h4 class="fw-bold">Transfer Funds</h4>
+    <p class="text-muted">Send money to another bank account</p>
+  </div>
+
+  <!-- Balance Card -->
+  <div class="card balance-card p-4 mb-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <small>Available Balance</small>
+        <h4 class="fw-bold">₹ 1,25,750.5</h4>
+      </div>
+      <div class="text-end">
+        <small>From Account</small><br>
+        <strong>SB1234567890</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transfer Form -->
+  <div class="card form-card p-4 col-lg-6">
+
+    <div class="d-flex align-items-center mb-3">
+      <i class="bi bi-play-circle-fill text-primary me-2"></i>
+      <h6 class="mb-0">Transfer Details</h6>
+    </div>
+
+    <form>
+
+      <!-- Recipient Account -->
+      <div class="mb-3">
+        <label class="form-label">Recipient Account Number</label>
+        <input type="text" class="form-control" placeholder="Enter 12-digit account number (e.g. SB9876543210)">
+      </div>
+
+      <!-- Amount -->
+      <div class="mb-1">
+        <label class="form-label">Amount (INR)</label>
+        <input type="number" class="form-control" placeholder="₹ 0.00">
+      </div>
+      <div class="mb-3 small-text">
+        Maximum: ₹1,25,750.50
+      </div>
+
+      <!-- Description -->
+      <div class="mb-4">
+        <label class="form-label">Description (Optional)</label>
+        <textarea class="form-control" rows="3" placeholder="Add a note for this transfer"></textarea>
+      </div>
+
+      <!-- Button -->
+      <div class="d-grid">
+        <button type="submit" class="btn btn-success transfer-btn">
+          <i class="bi bi-arrow-right-circle me-1"></i>
+          Transfer Funds
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

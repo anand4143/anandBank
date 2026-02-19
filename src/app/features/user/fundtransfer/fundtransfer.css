@@ -1,0 +1,23 @@
+.balance-card {
+      background: #198754;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .form-card {
+      border-radius: 12px;
+    }
+
+    .form-control {
+      border-radius: 8px;
+    }
+
+    .transfer-btn {
+      border-radius: 8px;
+      font-weight: 500;
+    }
+
+    .small-text {
+      font-size: 12px;
+      color: gray;
+    }

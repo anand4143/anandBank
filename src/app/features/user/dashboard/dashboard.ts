@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard.css'
 })
 export class Dashboard {
+  constructor(private router:Router){}
+
+  fundTransfer(){
+    this.router.navigate(['/user/fundTransfer']);
+  }
 
 }

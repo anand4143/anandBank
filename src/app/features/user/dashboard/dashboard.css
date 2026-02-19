@@ -1,0 +1,28 @@
+body {
+      background-color: #f4f6f9;
+    }
+    .balance-card {
+      background: #198754;
+      color: white;
+      border-radius: 12px;
+    }
+    .action-card {
+      border-radius: 12px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .action-card:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .transaction-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .credit {
+      color: green;
+      font-weight: 600;
+    }
+    .debit {
+      color: red;
+      font-weight: 600;
+    }
